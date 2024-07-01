@@ -3,12 +3,12 @@ name: Modify Framework and Services
 on:
   workflow_dispatch:
     inputs:
-      framework_jar_url:
-        description: 'URL to download framework.jar'
-        required: true
-      services_jar_url:
-        description: 'URL to download services.jar'
-        required: true
+      # framework_jar_url:
+        # description: 'URL to download framework.jar'
+        # required: true
+      # services_jar_url:
+        # description: 'URL to download services.jar'
+        # required: true
       android_api_level:
         description: 'Android API level'
         required: true
@@ -44,13 +44,13 @@ jobs:
         sudo apt full-upgrade -y
         sudo apt install -y default-jdk zipalign 7zip python3
 
-    - name: Download framework.jar
-      run: |
-        curl -L -o framework.jar "${{ github.event.inputs.framework_jar_url }}"
+    # - name: Download framework.jar
+      # run: |
+        # curl -L -o framework.jar "${{ github.event.inputs.framework_jar_url }}"
 
-    - name: Download services.jar
-      run: |
-        curl -L -o services.jar "${{ github.event.inputs.services_jar_url }}"
+    # - name: Download services.jar
+      # run: |
+        # curl -L -o services.jar "${{ github.event.inputs.services_jar_url }}"
 
     - name: Verify framework.jar
       run: |
