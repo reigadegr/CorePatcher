@@ -207,7 +207,7 @@ jobs:
       - name: Pack artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: jar_all
+          name: fas_simple
           compression-level: 9
           path: out
           
